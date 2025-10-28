@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Township Rollers FC</title>
+<link rel="stylesheet" type="text/css" href="indexx.css">
+</head>
+<body>
+<body style="background-color: #346eeb;">
+<header>
+  <!-- Replace 'logo.png' with your logo image URL or path -->
+  <img src="LOGO.PNG" alt="Township Rollers FC Logo" />
+</header>
+
+<nav>
+  <a href="INDEXXX.html" style="margin-right:10px; text-decoration:none; padding:8px 16px; background-color:#007bff; color:white; border-radius:4px;">HOME</a>
+<a href="llast.html" style="margin-right:10px; text-decoration:none; padding:8px 16px; background-color:#007bff; color:white; border-radius:4px;">NEWS AND BLOG</a>
+<a href="gally.html" style="margin-right:10px; text-decoration:none; padding:8px 16px; background-color:#007bff; color:white; border-radius:4px;">IMAGES</a>
+<a href="buy.html" style="margin-right:10px; text-decoration:none; padding:8px 16px; background-color:#007bff; color:white; border-radius:4px;">TICKETS</a>
+</nav>
+
+<main>
+  <h1 style="color: yellow;">TOWNSHIP ROLLERS FC</h1>
+  <div class="highlight">
+    <h2>MATCH HIGHLIGHTS</h2>
+    <!-- Match highlight image with hover tagline -->
+    <div class="match-highlight-container" id="matchHighlightBtn">
+      <img src="A.JPEG" alt="Match Highlight" class="match-highlight-img" />
+      <div class="tagline">Click to watch the match highlights!</div>
+    </div>
+  </div>
+ 
+
+<!-- Hidden video element -->
+<div style="display:none;">
+  <video id="matchVideo" width="640" height="360" controls>
+    <source src="LESS.MP4" type="video/mp4" />
+  
+  </video>
+</div>
+
+<!-- Modal overlay to display the video -->
+<div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); align-items:center; justify-content:center; z-index:9999; display:flex;">
+  <div style="position:relative; width:80%; max-width:800px;">
+    <video id="modalVideo" width="100%" controls>
+      <source src="ob.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <button onclick="closeVideo()" style="position:absolute; top:10px; right:10px; padding:5px 10px; font-size:16px;">Close</button>
+  </div>
+</div>
+
+<script>
+function closeVideo() {
+  document.getElementById('videoModal').style.display = 'none';
+  document.getElementById('modalVideo').pause(); // pause the video when closing
+}
+
+// To open the modal, you can use this function:
+function openVideo() {
+  document.getElementById('videoModal').style.display = 'flex';
+  document.getElementById('modalVideo').play(); // auto-play when opening
+}
+</script>
+
+<script>
+  // Function to open the modal and play the video
+  function openVideo() {
+    var modal = document.getElementById('videoModal');
+    var video = document.getElementById('modalVideo');
+    modal.style.display = 'flex'; // Show the modal
+    video.currentTime = 0; // Start from beginning
+    video.play(); // Play the video
+  }
+
+  // Function to close the modal and pause the video
+  function closeVideo() {
+    var modal = document.getElementById('videoModal');
+    var video = document.getElementById('modalVideo');
+    video.pause();
+    modal.style.display = 'none'; // Hide the modal
+  }
+
+  // Example: Attach openVideo() to your button or image click event
+  // document.getElementById('yourButtonId').addEventListener('click', openVideo);
+</script>
+
+<footer>
+  <a href="#"><img src="B.JPEG" alt="Facebook" /></a>
+  <a href="#"><img src="C.JPEG" alt="X" /></a>
+  <a href="#"><img src="D.JPEG" alt="TikTok" /></a>
+</footer>
+
+<footer style="display:flex; justify-content:center; gap:20px; padding:20px; background-color:#222;">
+  <!-- Facebook -->
+  <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+    <img src="fb.png" alt="Facebook" style="width:40px; height:40px;">
+  </a>
+  <!-- Twitter (X) -->
+  <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+    <img src="x.png" alt="Twitter" style="width:40px; height:40px;">
+  </a>
+  <!-- TikTok -->
+  <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer">
+    <img src="tiktok.png" alt="TikTok" style="width:40px; height:40px;">
+  </a>
+</footer>
+
+<script>
+  // Get elements
+  const matchBtn = document.getElementById('matchHighlightBtn');
+  const videoModal = document.getElementById('videoModal');
+  const modalVideo = document.getElementById('modalVideo');
+
+  // Add click event to open modal with video
+  matchBtn.addEventListener('click', () => {
+    // Set the video source if needed
+    // modalVideo.src = 'your-video.mp4'; // Uncomment and set your video URL
+    videoModal.style.display = 'flex';
+    modalVideo.play();
+  });
+
+  // Function to close modal
+  function closeVideo() {
+    modalVideo.pause();
+    videoModal.style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

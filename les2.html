@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tickets</title>
+<style>
+  body {
+    background-color: #007bff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px 20px;
+    color: white;
+  }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  /* Logo */
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .logo img {
+    width: 200px;
+  }
+  /* Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.2);
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  /* Header */
+  h2 {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  /* Search Bar (longer width) */
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .search-container input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 400px; /* Increased width */
+  }
+  .search-container button {
+    padding: 8px 12px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  /* Match layout */
+  .match {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 25px;
+  }
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .team img {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .team p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .score {
+    font-size: 60px;
+    font-weight: bold;
+  }
+  /* Social icons */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 20px;
+  }
+  .social-icons a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+  }
+</style>
+<!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+<div class="container">
+  <!-- Logo -->
+  <div class="logo">
+    <img src="https://via.placeholder.com/200x50?text=Township+Logo" alt="Township Rollers Logo" />
+  </div>
+  <!-- Search bar (longer width) -->
+  <div class="search-container">
+    <input type="text" placeholder="Search..." />
+    <button><i class="fas fa-search"></i></button>
+  </div>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Matches</a>
+    <a href="#">Tickets</a>
+    <a href="#">Gallery</a>
+    <a href="#">News</a>
+  </nav>
+  <!-- Match info -->
+  <h2>TICKETS</h2>
+  <div class="match">
+    <div class="team">
+      <img src="https://via.placeholder.com/200x130?text=Team+Left" alt="Team Left" />
+      <p>1</p>
+    </div>
+    <div class="score">-</div>
+    <div class="team">
+      <img src="https://via.placeholder.com/200x130?text=Team+Right" alt="Team Right" />
+      <p>0</p>
+    </div>
+  </div>
+  <!-- Social icons -->
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+    <a href="https://tiktok.com" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+  </div>
+</div>
+</body>
+</html>

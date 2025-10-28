@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Township Football Club</title>
+<!-- Font Awesome CDN for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="stylesheet" type="text/css" href="GALL.css">
+</head>
+<body>
+<body style="background-color: #346eeb;">
+<header>
+  <!-- Reduced size logo -->
+  <img src="logo.png" alt="Township Football Club Logo" style="width:70px; height:auto;" />
+</header>
+
+<nav>
+ <a href="INDEXXX.html">HOME</a>
+  <a href="llast.html">NEWS AND BLOG</a>
+  <a href="gally.html">IMAGES</a>
+  <a href="buy.html">TICKETS</a>
+</nav>
+
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterImages()" />
+</div>
+
+<h2>IMAGES</h2>
+
+<div class="images-container" id="imagesContainer">
+  <!-- Replace 'image1.jpg' etc. with your actual image paths -->
+  <img src="F.JPEG" alt="Player 1" />
+  <img src="G.JPEG" alt="Team Photo" />
+  <img src="H.JPEG" alt="Players Team" />
+  <img src="I.JPEG" alt="Training" />
+  <img src="J.JPEG" alt="Match" />
+  <img src="K.JPEG" alt="Bus" />
+</div>
+
+<footer style="display:flex; justify-content:center; gap:20px; padding:20px; background-color:#222;">
+  <!-- Facebook -->
+  <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+    <img src="fb.png" alt="Facebook" style="width:40px; height:40px;">
+  </a>
+  <!-- Twitter (X) -->
+  <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+    <img src="x.png" alt="Twitter" style="width:40px; height:40px;">
+  </a>
+  <!-- TikTok -->
+  <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer">
+    <img src="tiktok.png" alt="TikTok" style="width:40px; height:40px;">
+  </a>
+</footer>
+<script>
+  function filterImages() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const images = document.querySelectorAll('#imagesContainer img');
+    images.forEach(img => {
+      const altText = img.alt.toLowerCase();
+      if (altText.includes(input)) {
+        img.style.display = '';
+      } else {
+        img.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

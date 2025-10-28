@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Township Football Club</title>
+<!-- Font Awesome CDN for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<!-- Your CSS file -->
+<link rel="stylesheet" type="text/css" href="TIK.css">
+</head>
+<body style="background-color: #346eeb;">
+<header>
+  <!-- Reduced size logo -->
+  <img src="logo.png" alt="Township Football Club Logo" style="width:70px; height:auto;" />
+</header>
+
+<!-- Navigation Bar styled like the provided webpage -->
+<nav style="background-color: #0066CC; padding: 10px 20px;">
+  <ul style="list-style: none; display: flex; justify-content: center; margin: 0; padding: 0;">
+    <li style="margin: 0 15px;">
+      <a href="#" style="color: white; text-decoration: none; font-weight: bold;">HOME</a>
+    </li>
+    <li style="margin: 0 15px;">
+      <a href="#" style="color: white; text-decoration: none; font-weight: bold;">NEWS AND BLOG</a>
+    </li>
+    <li style="margin: 0 15px;">
+      <a href="#" style="color: white; text-decoration: none; font-weight: bold;">IMAGES</a>
+    </li>
+    <li style="margin: 0 15px;">
+      <a href="#" style="color: white; text-decoration: none; font-weight: bold;">TICKETS</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="search-box" style="margin: 20px
+
+<div class="search-box" style="margin: 20px;">
+  <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterImages()" style="padding: 8px; width: 200px; border-radius: 4px; border: 1px solid #ccc;" />
+</div>
+
+<!-- Tickets Section -->
+<div class="tickets">
+  <h2>TICKETS</h2>
+</div>
+
+<!-- Highlights Image with tagline overlay -->
+<div style="text-align:center;">
+  <div class="highlight-container" id="ticketImageContainer">
+    <img src="L.JPEG" alt="International Friendly Highlights" class="highlight-image" id="ticketImage" />
+    <div class="tagline" id="tagline">Click to Buy Ticket</div>
+  </div>
+</div>
+
+<div class="footer" style="position: fixed; bottom: 10px; width: 100%; text-align: center;">
+  <a href="https://facebook.com/yourpage" target="_blank" rel="noopener" aria-label="Facebook" style="margin: 0 10px;">
+    <i class="fab fa-facebook" style="font-size: 24px; color: white;"></i>
+  </a>
+   <!-- X (Twitter) Icon -->
+  <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener" aria-label="X" style="margin: 0 10px; display: inline-block; width: 40px; height: 40px;">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="white" style="margin-top: 8px;">
+      <circle cx="12" cy="12" r="12" stroke="white" stroke-width="2" fill="none"/>
+      <text x="12" y="16" text-anchor="middle" font-size="12" fill="white" font-family="Arial, sans-serif">X</text>
+    </svg>
+  </a>
+
+  <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener" aria-label="TikTok" style="margin: 0 10px;">
+    <i class="fab fa-tiktok" style="font-size: 24px; color: white;"></i>
+  </a>
+</div>
+
+<!-- Footer -->
+<footer>
+  
+</footer>
+
+<!-- Popup overlay for "BOUGHT" message -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup-message" id="popupMessage">BOUGHT</div>
+</div>
+
+<script>
+  // Get elements
+  const ticketImageContainer = document.getElementById('ticketImageContainer');
+  const popupOverlay = document.getElementById('popupOverlay');
+
+  // Show popup when image is clicked
+  ticketImageContainer.addEventListener('click', () => {
+    popupOverlay.style.display = 'flex';
+    // Hide after 2 seconds
+    setTimeout(() => {
+      popupOverlay.style.display = 'none';
+    }, 2000);
+  });
+</script>
+
+</body>
+</html>

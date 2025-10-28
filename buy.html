@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Township Football Club</title>
+<!-- Font Awesome CDN for social icons -->
+<link rel="stylesheet" type="text/css" href="GALL.css">
+<style>
+  /* Additional styles for hover effect and call to action box */
+  .highlight-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .highlight-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Overlay arrow icon */
+  .arrow-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-size: 48px;
+    color: white;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+
+  /* Show arrow on hover */
+  .highlight-container:hover .arrow-overlay {
+    opacity: 1;
+  }
+
+  /* Call to action box style */
+  .bought-box {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00FF00; /* Bright green */
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+</style>
+</head>
+<body style="background-color: #346eeb;">
+<header>
+  <!-- Reduced size logo -->
+  <img src="logo.png" alt="Township Football Club Logo" style="width:70px; height:auto;" />
+</header>
+
+<!-- Navigation (unchanged) -->
+<nav>
+ <a href="INDEXXX.html">HOME</a>
+  <a href="llast.html">NEWS AND BLOG</a>
+  <a href="gally.html">IMAGES</a>
+  <a href="buy.html">TICKETS</a>
+</nav>
+
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterImages()" />
+</div>
+
+<!-- Tickets Section -->
+<div class="tickets">
+  <h2>TICKETS</h2>
+</div>
+
+<!-- Highlights Image with overlay arrow and clickable -->
+<div style="text-align:center;">
+  <div class="highlight-container" id="ticketImageContainer">
+    <img src="L.JPEG" alt="International Friendly Highlights" class="highlight-image" id="ticketImage" />
+    <!-- Arrow overlay icon -->
+    <div class="arrow-overlay">
+      <i class="fas fa-arrow-circle-up"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Call to Action "BOUGHT" box -->
+<div class="bought-box" id="boughtBox">
+  BOUGHT
+</div>
+
+<footer style="display:flex; justify-content:center; gap:20px; padding:20px; background-color:#222;">
+  <!-- Facebook -->
+  <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+    <img src="fb.png" alt="Facebook" style="width:40px; height:40px;">
+  </a>
+  <!-- Twitter (X) -->
+  <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+    <img src="x.png" alt="Twitter" style="width:40px; height:40px;">
+  </a>
+  <!-- TikTok -->
+  <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer">
+    <img src="tiktok.png" alt="TikTok" style="width:40px; height:40px;">
+  </a>
+</footer>
+<!-- Popup overlay for "BOUGHT" message (not needed anymore, removed) -->
+
+<script>
+  // Show the "BOUGHT" box when image is clicked
+  const ticketImageContainer = document.getElementById('ticketImageContainer');
+  const boughtBox = document.getElementById('boughtBox');
+
+  ticketImageContainer.addEventListener('click', () => {
+    boughtBox.style.display = 'block';
+    // Hide after 2 seconds
+    setTimeout(() => {
+      boughtBox.style.display = 'none';
+    }, 2000);
+  });
+</script>
+</body>
+</html>

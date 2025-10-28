@@ -1,0 +1,120 @@
+<style>
+  body {
+    background-color: #007bff; /* Dark Blue background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  /* Header / Logo */
+  .header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .header img {
+    width: 150px;
+  }
+    /* Search Bar (longer width) */
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .search-container input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 400px; /* Increased width */
+  }
+  .search-container button {
+    padding: 8px 12px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  /* Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff; /* White background for nav */
+    padding: 10px 0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  nav a {
+    color: #0052cc; /* Blue text */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+  nav a:hover {
+    background-color: #0041a8; /* Darker blue on hover */
+    color: #fff;
+  }
+  /* Banner / Main Highlight */
+  .banner {
+    background-color: #ffffff; /* White background for highlight */
+    color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    flex: 1; /* Take up remaining space */
+  }
+  .banner h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+  }
+  /* Highlights image */
+  .highlight-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  /* Gallery images */
+  .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  /* Social icons at the bottom */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: auto; /* Push to bottom */
+    padding-top: 20px;
+  }
+  .social-icons a {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+  }
+  /* Responsive adjustments */
+  @media(max-width: 768px){
+    .gallery {
+      justify-content: center;
+    }
+    .gallery img {
+      width: 150px;
+      height: 100px;
+    }
+  }
+</style>
